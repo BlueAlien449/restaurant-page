@@ -1,0 +1,1 @@
+(()=>{"use strict";let e=document.createElement("div");e.textContent="Hello World!";const t=e;document.querySelector("#content").append(t)})();
