@@ -1,12 +1,13 @@
 import Element from "./elementClass";
 import createHome from "./home";
 import createMenu from "./menu";
+import createContact from "./contact";
 import { contentDiv } from "./home";
 
 export function loadPage(){
     createNav()
     createHeader() 
-    createMenu()
+    createContact()
     createFooter()
 }
 
