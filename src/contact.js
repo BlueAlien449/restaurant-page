@@ -19,12 +19,13 @@ export default function createContact() {
 
     .addChild(new Element('div').addAttributes({ id: 'contact-hours', class: 'contact-element' })
     .addChild(new Element('h1').addAttributes({ id: 'hours-title', class: 'title' }).setInnerText('Opening Hours'))
-    .addChild(new Element('p').addAttributes({ id: 'opening-hours'}).setInnerText('Monday to Friday: 7:00 am - 8:00 pm Saturday and Sunday: 8:00 am - 6:00 pm')))
+    .addChild(new Element('p').addAttributes({ id: 'opening-hours'}).setInnerText('Monday to Friday: 7:00am - 8:00pm'))
+    .addChild(new Element('div').addAttributes({ id: 'weekend-hours' }).setInnerText('Saturday and Sunday: 8:00am - 6:00pm')))
 
     .addChild(new Element('div').addAttributes({ id: 'contact-comment', class: 'contact-element' })
     .addChild(new Element('p').addAttributes({ id: 'contact-text'}).setInnerText("We value your input and strive to provide the best possible experience for our customers. If you have any questions about our menu, special requests, or if there's anything else we can assist you with, please don't hesitate to reach out to us. Our dedicated team is here to ensure your visit to Mocha Haven is nothing short of exceptional.")))
 
     .addChild(new Element('div').addAttributes({ id: 'contact-image-container', class: 'contact-element' })
-    .addChild(new Element('img').addAttributes({ src: contactImg, id: 'contact-image'})))
+    .addChild(new Element('img').addAttributes({ id: 'contact-image'})))
     contentDiv.appendChild(contactContent.build());
 }
