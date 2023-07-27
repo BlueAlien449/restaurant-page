@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800;900&display=swap');
+
 *{
+    font-family: 'Poppins', sans-serif;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -42,7 +45,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    padding: 3rem 4rem;
+    padding: 3rem 12rem;
 }
 
 #footer-nav{
@@ -63,6 +66,48 @@
     font-size: 16px;
 }
 
-.footer-element{
-    padding: 0 2rem;
+#contact-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        "location main"
+        "hours main"
+        "phone main"
+        "email main"
+        "comment main";
+    gap: 3rem;
+    padding: 5rem 12rem;
+}
+
+#contact-image-container{
+    display: grid;
+    grid-area: main;
+    justify-items: center;
+    background: url('../img/contact-img.jpg') no-repeat;
+    background-size: cover;
+    background-position: 50% 33%;
+}
+
+#contact-location{
+    grid-area: location;
+}
+
+#contact-phone{
+    grid-area: phone;
+}
+
+#contact-email{
+    grid-area: email;
+}
+
+#contact-hours{
+    grid-area: hours;
+}
+
+#contact-comment{
+    grid-area: comment;
+}
+
+.title{
+    margin-bottom: 1rem;
 }
