@@ -111,3 +111,62 @@
 .title{
     margin-bottom: 1rem;
 }
+
+#cafeMenu{
+    display: grid;
+    padding: 3rem 12rem;
+}
+
+.section-title{
+    margin-bottom: 1rem;
+}
+
+.menu-section{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 3rem;
+}
+
+#coffee{
+    grid-template-areas: 
+        "title image"
+        "list image";
+    margin-bottom: 3rem;
+}
+
+#tea{
+    grid-template-areas: 
+        "image title"
+        "image list";
+    margin-bottom: 3rem;
+}
+
+#treats{
+    grid-template-areas:
+        "title image"
+        "list image";
+}
+
+
+.section-title{
+    grid-area: title;
+}
+
+.menu-element{
+    grid-area: list;
+}
+
+.menu-img{
+    grid-area: image;
+    width: 70%;
+}
+
+.bold{
+    font-weight: bold;
+} 
+
+.element-desc{
+    margin-left: 1rem;
+}
