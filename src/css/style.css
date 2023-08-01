@@ -133,14 +133,12 @@
     grid-template-areas: 
         "title image"
         "list image";
-    margin-bottom: 3rem;
 }
 
 #tea{
     grid-template-areas: 
         "image title"
         "image list";
-    margin-bottom: 3rem;
 }
 
 #treats{
@@ -225,4 +223,8 @@
     margin: 5rem auto;
     width: 30%;
     color: rgba(255, 255, 255, 0.678);
+}
+
+.nav-item{
+    cursor: pointer;
 }
