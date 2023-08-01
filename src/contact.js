@@ -1,13 +1,13 @@
 let contactImg = require('./img/contact-img.jpg');
 import Element from "./elementClass";
-import { contentDiv } from "./home";
 
 export default function createContact() {
-    const contactContent = new Element('div').addAttributes({ id: 'contact-content', class: 'contact-container' })
+    const pageContentDiv = document.querySelector('#page-content');
+
+    const contactContent = new Element('div').addAttributes({ id: 'contact-content', class: 'contact-container page-content' })
     .addChild(new Element('div').addAttributes({ id: 'contact-location', class: 'contact-element' })
     .addChild(new Element('h1').addAttributes({ id: 'location-title', class: 'title' }).setInnerText('Location'))
     .addChild(new Element('p').addAttributes({ id: 'location-text'}).setInnerText('Mocha Haven Café 123 Main Street City, State, ZIP')))
-    
 
     .addChild(new Element('div').addAttributes({ id: 'contact-phone', class: 'contact-element' })
     .addChild(new Element('h1').addAttributes({ id: 'phone-title', class: 'title' }).setInnerText('Phone Number'))
@@ -27,5 +27,5 @@ export default function createContact() {
 
     .addChild(new Element('div').addAttributes({ id: 'contact-image-container', class: 'contact-element' })
     .addChild(new Element('img').addAttributes({ id: 'contact-image'})))
-    contentDiv.appendChild(contactContent.build());
+    pageContentDiv.appendChild(contactContent.build());
 }

@@ -2,11 +2,11 @@ let homeImg1 = require('./img/home-img.jpg');
 let homeImg2 = require('./img/home-about-img.jpg');
 import Element from "./elementClass";
 
-export const contentDiv = document.querySelector('#content');
-
 export default function createHome() {
+    const pageContentDiv = document.querySelector('#page-content');
+    
     const homeContent = new Element('div')
-    .addAttributes({ id: 'home-cont', class: 'content' })
+    .addAttributes({ id: 'home-cont', class: 'page-content' })
 
     .addChild(new Element('div').addAttributes({ id: 'home-welcome'})
     .addChild(new Element('div').addAttributes({ id: 'home-welcome-text' })
@@ -24,5 +24,5 @@ export default function createHome() {
     .setInnerText('Our passion for coffee extends beyond mere beans and brews. We are dedicated to sourcing only the finest, ethically-sourced coffee beans from around the world. Each sip tells a story of the regions and farms that produce the unique flavors we serve. Whether you prefer a velvety smooth latte, a bold and robust espresso shot, or a refreshing cold brew, we have the perfect cup to satisfy your discerning taste buds.')))
     .addChild(new Element('img').addAttributes({ src: homeImg2, class: 'homeAbout-img'})))
 
-    contentDiv.appendChild(homeContent.build());
+    pageContentDiv.appendChild(homeContent.build());
 }
